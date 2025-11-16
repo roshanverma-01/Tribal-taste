@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SuperFood — Tribal Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="min-h-screen bg-background">
+
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="container nav-inner">
+        <div class="brand">
+          <!-- simple leaf SVG -->
+          <svg class="icon leaf" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 21s7-6 10-9c3-3 9-10 9-10s-7 6-10 9C8 17 2 21 2 21z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="brand-title">SuperFood</span>
+        </div>
+
+        <div class="nav-links desktop-only">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#marketplace">Marketplace</a>
+          <a href="#impact">Impact</a>
+          <a href="#stories">Stories</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-actions desktop-only">
+          <button class="btn btn-outline" id="cartBtn">Cart (0)</button>
+          <button class="btn">Join as SHG</button>
+        </div>
+
+        <button id="mobileToggle" class="mobile-only btn-icon" aria-label="Toggle menu">
+          <!-- hamburger -->
+          <svg viewBox="0 0 24 24" class="icon"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="mobile-menu mobile-hidden">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#marketplace">Marketplace</a>
+        <a href="#impact">Impact</a>
+        <a href="#stories">Stories</a>
+        <a href="#contact">Contact</a>
+        <div class="mobile-actions">
+          <button class="btn btn-outline full">Cart (0)</button>
+          <button class="btn full">Join as SHG</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1 class="hero-title"><span id="typewriter"></span></h1>
+        <p class="hero-sub">Connecting indigenous self-help groups with conscious consumers. Experience the richness of tribal ingredients and support sustainable livelihoods.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary" id="exploreBtn">Explore Marketplace</button>
+          <button class="btn btn-outline">Learn Our Story</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section bg-card">
+      <div class="container two-col">
+        <div>
+          <h2>Empowering Tribal Communities Through Food</h2>
+          <p>SuperFood bridges the gap between tribal self-help groups and urban consumers, creating a sustainable marketplace that celebrates indigenous food traditions while providing fair economic opportunities.</p>
+          <p>Every purchase supports sustainable harvesting practices, preserves biodiversity, and helps maintain the cultural identity of indigenous communities across India.</p>
+          <div class="gap-inline">
+            <button class="btn"><svg class="icon"><path d="M12 12c2 0 4-1 5-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Join Our Mission</button>
+            <button class="btn btn-outline">Learn More</button>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1758812818698-4814bdfed2d5?q=80&w=1080&auto=format&fit=crop" alt="Traditional food preparation"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETPLACE -->
+    <section id="marketplace" class="section">
+      <div class="container">
+        <div class="center-text">
+          <h2>Authentic Tribal Marketplace</h2>
+          <p>Discover unique ingredients and traditional foods sourced directly from indigenous communities</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" id="categoryTabs"></div>
+
+        <!-- Product grid -->
+        <div id="productGrid" class="grid grid-products"></div>
+
+        <div class="center-text mt-8">
+          <button class="btn btn-outline">View All Products</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact" class="section bg-faint">
+      <div class="container">
+        <div class="center-text">
+          <h2>Our Community Impact</h2>
+          <p>Every purchase directly supports tribal livelihoods and sustainable practices</p>
+        </div>
+
+        <div class="grid grid-metrics">
+          <div class="metric"><div class="metric-icon">👥</div><div><div class="metric-value">150+</div><div class="metric-label">Self-Help Groups</div></div></div>
+          <div class="metric"><div class="metric-icon">📈</div><div><div class="metric-value">40%</div><div class="metric-label">Income Increase</div></div></div>
+          <div class="metric"><div class="metric-icon">❤️</div><div><div class="metric-value">50K+</div><div class="metric-label">Lives Impacted</div></div></div>
+          <div class="metric"><div class="metric-icon">🍃</div><div><div class="metric-value">100%</div><div class="metric-label">Sustainable</div></div></div>
+        </div>
+
+        <div class="impact-card">
+          <div>
+            <h3>How Your Purchase Helps</h3>
+            <ul>
+              <li><strong>70%</strong> of each sale goes directly to tribal producers</li>
+              <li><strong>15%</strong> supports community development programs</li>
+              <li><strong>10%</strong> funds education and skill development</li>
+              <li><strong>5%</strong> maintains platform operations</li>
+            </ul>
+          </div>
+          <div class="image-card small">
+            <img src="https://images.unsplash.com/photo-1606239763507-f44d0c248629?q=80&w=1080&auto=format&fit=crop" alt="Community impact"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORIES -->
+    <section id="stories" class="section">
+      <div class="container">
+        <div class="center-text">
+          <h2>Stories & Traditions</h2>
+          <p>Discover the rich heritage, recipes, and stories behind our tribal foods</p>
+        </div>
+
+        <div id="storiesGrid" class="grid grid-stories"></div>
+
+        <div class="center-text mt-8">
+          <button class="btn btn-outline">Read More Stories</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / JOIN -->
+    <section id="contact" class="section bg-primary text-white">
+      <div class="container two-col">
+        <div class="card-blur">
+          <div class="card-header"><div class="icon-big">👥</div><h3>Join as a Self-Help Group</h3></div>
+          <p>Partner with us to bring your authentic products to conscious consumers and earn fair compensation for your traditional knowledge.</p>
+          <div class="form">
+            <input placeholder="SHG Name" />
+            <input placeholder="Contact Person" />
+            <input type="email" placeholder="Email Address" />
+            <input placeholder="Location/Region" />
+            <button class="btn btn-primary full">Submit Application</button>
+          </div>
+        </div>
+
+        <div class="card-blur">
+          <div class="card-header"><div class="icon-big">✉️</div><h3>Partner With Us</h3></div>
+          <p>Organizations, NGOs, and businesses interested in supporting tribal communities and promoting sustainable food systems are welcome to collaborate.</p>
+          <div class="form">
+            <input placeholder="Organization Name" />
+            <input placeholder="Your Name" />
+            <input type="email" placeholder="Email Address" />
+            <input placeholder="Partnership Interest" />
+            <button class="btn btn-primary full">Get In Touch</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container center-text mt-12">
+        <h3>Stay Connected</h3>
+        <p>Subscribe to our newsletter for stories, recipes, and updates from tribal communities</p>
+        <div class="subscribe">
+          <input type="email" placeholder="Enter your email" />
+          <button class="btn btn-primary">Subscribe</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand-row"><svg class="icon leaf" viewBox="0 0 24 24" fill="none"><path d="M2 21s7-6 10-9c3-3 9-10 9-10s-7 6-10 9C8 17 2 21 2 21z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SuperFood</span></div>
+          <p class="muted">Connecting tribal communities with conscious consumers for a sustainable future.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul><li><a href="#about">About Us</a></li><li><a href="#marketplace">Marketplace</a></li><li><a href="#impact">Our Impact</a></li><li><a href="#stories">Stories</a></li></ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul><li><a href="#">FAQs</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#contact">Contact</a></li></ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Fair Trade Policy</a></li></ul>
+        </div>
+      </div>
+      <div class="container text-center small muted">© 2025 SuperFood. All rights reserved. Empowering tribal communities, one purchase at a time.</div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script src="db.js"></script>
+  <script src="server.js"></script>
+  
+</body>
+</html>
